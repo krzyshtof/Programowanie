@@ -1,0 +1,47 @@
+// Wspolrzedne punkty, struktura
+
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+struct punkt{
+	int x,y;
+};
+bool mniejsze(punkt A, punkt B)
+{
+	if(A.x<B.x) return true;
+	if(A.x==B.x) return true;
+		return(A.y<B.x);
+		return false;
+}
+
+int main()
+{
+	punkt A,B,C;
+	A.x=1;
+	A.y=2;
+	
+	cout<<"Wspolrzedne punktu A: "<<"x = "<<A.x<<" y = "<<A.y<<endl<<endl;
+	cout<<"Podaj wspolrzedne punktu B"<<endl;
+	cin>>B.x>>B.y;
+	cout<<endl;
+	
+	punkt tab[5];
+	for(int i=0;i<5;i++)
+	{
+		cout<<"Podaj wspolrzedne "<<i<<"-ego punktu: ";
+		cin>>tab[i].x>>tab[i].y;
+	}
+	sort(tab,tab+5,mniejsze);
+	system("cls");
+	cout<<"Wspolrzedne punktu A: "<<"x = "<<A.x<<" y = "<<A.y<<endl<<endl;
+	cout<<"Wspolrzedne punktu B: "<<"x = "<<B.x<<" y = "<<B.y<<endl<<endl;
+	for(int i=0;i<5;i++)
+	{
+		cout<<"Wspolrzedne punktu "<<i<<" to: ";
+		cout<<tab[i].x<<" "<<tab[i].y<<endl;
+	}
+return 0;
+}
