@@ -1,0 +1,32 @@
+// Wspolrzedne punkty, struktura
+
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+struct STUDENT{
+	string imie, nazwisko;
+	int nr_indeksu;
+	long long pesel;
+};
+
+int main()
+{
+	const int n=2;
+	STUDENT A,B;
+	for(int i=0;i<n;i++)
+	{
+		cout<<"Student nr: "<<i<<endl;
+		cout<<"Imie: ";
+		cin>>A.imie;
+		cout<<endl<<endl;
+		
+		cout<<"Nazwisko: ";
+		cin>>A.nazwisko;
+		cout<<endl<<endl;
+	}
+	cout<<endl;
+return 0;
+}
